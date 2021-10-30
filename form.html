@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/form.css">
+    <title>Productos</title>
+</head>
+
+<body>
+    <div id="intro">
+        <div id="barra">
+            <img class="icono-size" src="../iconos/cart.svg" alt="">
+        </div>
+        <div class="sub-barra">
+            <div class="sub-title">
+                <h3><a href="../index.html">KUPAL STORE</a></h3>
+            </div>
+            <div class="sub-menu">
+                <ul>
+                    <li class="item"><a href="./productos.html">Productos</a>
+                        <ul class="desplegable">
+                            <li><a href="./cuero.html">Cuero</a></li>
+                            <li><a href="./cruelty.html">Cruelty Free</a></li>
+                            <li><a href="./accesorios.html">Accesorios</a></li>
+                        </ul>
+                    </li>
+                    <li class="item"><a href="./mayorista.html">Mayoristas</a>
+                        <ul class="desplegable">
+                            <li><a href="./mayorista.html#mayoristas">Comercios</a></li>
+                            <li><a href="./mayorista.html#regalos">Regalos Empresariales</a></li>
+                        </ul>
+                    </li>
+                    <li class="item"><a href="./informacion.html">Información</a>
+                        <ul class="desplegable">
+                            <li><a href="#">Envíos</a></li>
+                            <li><a href="#">Cambios</a></li>
+                            <li><a href="#">Medio de Pago</a></li>
+                        </ul>
+                    </li>
+                    <li class="item"><a href="./nosotros.html">Nosotros</a>
+                        <ul class="desplegable">
+                            <li><a href="#contact-page">Contacto</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="nosotros-container">
+        <h3 class="form-subtitle">Nosotros</h3>
+        <p id="nosotros">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellat adipisci eaque pariatur, <br> quibusdam reprehenderit porro dolor impedit dicta nisi velit. Consequatur a laboriosam veritatis cupiditate vitae. Et, alias distinctio!
+            <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellat adipisci eaque pariatur, <br> quibusdam reprehenderit porro dolor impedit dicta nisi velit. Consequatur a laboriosam veritatis cupiditate vitae. Et, alias distinctio!
+            <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellat adipisci eaque pariatur, <br> quibusdam reprehenderit porro dolor impedit dicta nisi velit. Consequatur a laboriosam veritatis cupiditate vitae. Et, alias distinctio!
+            <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellat adipisci eaque pariatur, <br> quibusdam reprehenderit porro dolor impedit dicta nisi velit. Consequatur a laboriosam veritatis cupiditate vitae. Et, alias distinctio!
+            <br> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellat adipisci eaque pariatur, <br> quibusdam reprehenderit porro dolor impedit dicta nisi velit. Consequatur a laboriosam veritatis cupiditate vitae. Et, alias distinctio!
+            <br>
+        </p>
+    </div>
+    <div id="contact-page">
+        <div id="map">
+            <h3 class="form-subtitle">Ubicación</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d210146.68168877432!2d-58.573383207134555!3d-34.615743688997895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb6e15b933ab%3A0xce79224171341e5b!2sSede%20del%20Gobierno%20de%20la%20Ciudad!5e0!3m2!1ses!2sar!4v1635479243247!5m2!1ses!2sar"
+                width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <div id="form-container">
+            <form id="form-contact" action="./submit.html" method="get"></form>
+            <h3 class="form-subtitle">Datos personales</h3>
+            <br>
+            <div class="input-data">
+                <input class="campo" type="text" name="text" id="name" placeholder="Ingrese su nombre" minlength="20" required pattern="[A-Za-z]" />
+            </div>
+            <br>
+            <br>
+            <div class="input-data">
+                <input class="campo" type="text" name="lastname" id="lastname" placeholder="Ingrese su apellido" />
+            </div>
+            <br>
+            <br>
+            <div class="input-data">
+                <label for="contact-type">Medio de contacto preferido:</label>
+                <br>
+                <br>
+                <input type="radio" name="radContact" id="radEmail" checked="true">
+                <label class="label-text" for="radEmail">Email</label>
+
+                <input type="radio" name="radContact" id="radTel">
+                <label class="label-text" for="radTel">Teléfono</label>
+            </div>
+            <br>
+            <br>
+            <div class="input-data-contact">
+                <div class="input-data">
+                    <input class="campo" type="email" name="contact" id="contact" placeholder="Ingrese su email" />
+                </div>
+            </div>
+        </div>
+        <div id="comment-form">
+            <h3 class="form-subtitle">Comentarios</h3>
+            <br>
+            <div class="input-data">
+                <br>
+                <textarea name="comentario" id="comments" cols="30" rows="10" placeholder="Ingrese un comentario"></textarea>
+            </div>
+            <br>
+            <br>
+            <input id="button" type="submit" value="Enviar" onclick="sendForm()">
+        </div>
+    </div>
+
+    <script src="./js/form.js"></script>
+</body>
+<footer>
+    <div id="iconos">
+        <div id="icono-title">
+            <span>Seguinos en:</span>
+        </div>
+        <div class="icono-container">
+            <a href="https://www.instagram.com/kupal.store/" target="_blank" rel="noopener noreferrer"><img class="icono-size" src="./iconos/instagram-brands.svg" alt=""></a>
+            <span class="link-media">kupal.store</span>
+        </div>
+        <div class="icono-container">
+            <a href="https://www.facebook.com/razcarteras/" target="_blank" rel="noopener noreferrer"><img class="icono-size" src="./iconos/facebook-square-brands.svg" alt=""></a>
+            <span class="link-media">carteras kupal</span>
+        </div>
+    </div>
+</footer>

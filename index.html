@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Kupal Store</title>
+</head>
+<body>
+    <nav>
+        <div id="navegacion">
+            <div id="barra">
+               <img class="icono-size" src="./iconos/cart.svg" alt="">
+            </div>    
+            <div class="menu">
+                <ul>
+                    <li class="item"><a href="#">Productos</a>
+                        <ul class="desplegable">
+                            <li><a href="./cuero.html">Cuero</a></li>
+                            <li><a href="./cruelty.html">Cruelty Free</a></li>
+                            <li><a href="./accesorios.html">Accesorios</a></li>
+                        </ul>
+                    </li>
+                    <li class="item"><a href="./mayorista.html">Mayoristas</a>
+                        <ul class="desplegable">
+                            <li><a href="./mayorista.html#mayoristas">Comercios</a></li>
+                            <li><a href="./mayorista.html#regalos">Regalos Empresariales</a></li>
+                        </ul>
+                    </li>
+                    <li class="item"><a href="./informacion.html">Información</a>
+                        <ul class="desplegable">
+                            <li><a href="#">Envíos</a></li>
+                            <li><a href="#">Cambios</a></li>
+                            <li><a href="#">Medio de Pago</a></li>
+                        </ul>
+                    </li>            
+                    <li class="item"><a href="./form.html">Nosotros</a>
+                        <ul class="desplegable">
+                            <li><a href="./form.html#contact-page">Contacto</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>    
+        <div id="logo">
+            <h1>KUPAL</h1>
+        </div>
+    </nav>
+      <!--image slide star-->
+    <div id="slider">
+        <div class="slides">
+            <!--radio button star-->
+            <input type="radio" name="radio-btn" id="radio1">
+            <input type="radio" name="radio-btn" id="radio2">
+            <input type="radio" name="radio-btn" id="radio3">
+            <input type="radio" name="radio-btn" id="radio4">          
+            <!--radio button end-->
+            <!--slide images start-->
+            <div class="slide first">
+                <img src="./img/slide/1.jpeg" alt="riñonera">
+            </div>
+            <div class="slide">
+                <img src="./img/slide/2.jpeg" alt="cartera">
+            </div>
+            <div class="slide">
+                <img src="./img/slide/3.jpeg" alt="billetera">
+            </div>
+            <div class="slide">
+                <img src="./img/slide/4.jpeg" alt="bandolera">
+            </div>
+            <!--slide images end-->
+            <!--automatic navigation-->
+            <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+            </div>
+            <!--automatic navigation end-->
+        </div>
+        <!--manual navigation start-->
+        <div class="navigation-manual">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+        <!--manual navigation end-->
+    </div>
+    <!--image slide end-->
+    <script type="text/javascript">
+    var counter = 1;
+    setInterval(function(){
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 4){
+            counter = 1;
+        }
+    }, 5000);
+    </script>
+    <main>
+        <h2 id="principal-title">New Collection</h2>
+        <div id="card-container">
+            <div class="card-item card-item-1">
+                <a class="link-card" href="./cuero.html">
+                    <img class="card-image" src="./img/cuero/foto9.jpeg" alt="Cartera">
+                    <div class="card-description">
+                        <span class="description">Cuero</span>
+                    </div>
+                </a>
+            </div>
+            <div class="card-item card-item-2">
+                <a class="link-card" href="./cuero.html">
+                    <img class="card-image" src="./img/eco/mochi2.jpeg" alt="mochila">
+                    <div class="card-description">
+                        <span class="description">Cruelty Free</span>
+                    </div>
+                </a>    
+            </div>
+            <div class="card-item card-item-3">
+                <a class="link-card" href="./cuero.html">
+                    <img class="card-image" src="./img/slide/3.jpeg" alt="billetera">
+                    <div class="card-description">
+                        <span class="description">Accesorios</span>
+                    </div>
+                </a>    
+            </div>
+        </div>
+    </main>
+</body>
+<footer>   
+    <div id="iconos">
+        <div id="icono-title">
+            <span>Seguinos en:</span> 
+        </div>
+        <div class="icono-container">
+            <a href="https://www.instagram.com/kupal.store/" target="_blank" rel="noopener noreferrer"><img class="icono-size" src="./iconos/instagram-brands.svg" alt=""></a>
+            <span class="link-media" >kupal.store</span>
+        </div>
+        <div class="icono-container">
+            <a href="https://www.facebook.com/razcarteras/" target="_blank" rel="noopener noreferrer"><img class="icono-size" src="./iconos/facebook-square-brands.svg" alt=""></a>
+            <span class="link-media" >carteras kupal</span>
+        </div>
+    </div>    
+</footer>
+</html>
