@@ -1,0 +1,355 @@
+@font-face {
+    font-family: "Roboto Light";
+    src: url(./Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: "Roboto Thin";
+    src: url(./Roboto/Roboto-Thin.ttf);
+}
+
+* {
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#barra {
+    width: 100%;
+    text-align: end;
+    background-color: black;
+}
+
+.menu {
+    text-align: center;
+    height: 50px;
+    background-color: hsla(0, 0%, 100%, 0.747);
+}
+
+#navegacion {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+.menu ul {
+    list-style: none;
+    font-size: 1em;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    position: relative;
+    float: left;
+    margin: 0 50px 0px 50px;
+}
+
+.item a {
+    color: hsl(0, 0%, 0%);
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+}
+
+.item>a:before {
+    content: " ";
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: hsl(0, 0%, 0%);
+    visibility: hidden;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .25s linear;
+}
+
+.item>a:hover:before,
+.item>a:focus:before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.item .desplegable {
+    display: none;
+    position: absolute;
+    text-align: left;
+    padding: 0;
+}
+
+.item:hover .desplegable {
+    display: block;
+    background-color: hsla(0, 0%, 100%, 0.747);
+}
+
+#logo {
+    font-family: "Roboto Thin";
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: 30px;
+    margin-top: 120px;
+    margin-bottom: -30px;
+    text-transform: uppercase;
+}
+
+#slider {
+    width: 100%;
+    height: 380px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 380px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 100%;
+    height: 380px;
+}
+
+
+/*css for manual slide navigation*/
+
+.navigation-manual {
+    position: absolute;
+    width: 100%;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 1px solid #a75353;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 20px;
+}
+
+.manual-btn:hover {
+    background: #a75353;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -20%;
+}
+
+#radio3:checked~.first {
+    margin-left: -40%;
+}
+
+#radio4:checked~.first {
+    margin-left: -60%;
+}
+
+h2 {
+    text-align: center;
+    margin: 100px;
+    font-size: 3em;
+    font-family: "Roboto Light" !important;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+}
+
+
+/* Grid */
+
+#card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 600px;
+    padding: 20px;
+    gap: 15px;
+}
+
+.card-item {
+    position: relative;
+}
+
+.card-item-3 {
+    grid-column: span 2;
+    height: 300px;
+    margin-top: 40px;
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-item-3>.card-image {
+    object-fit: contain;
+}
+
+
+/* Animacion */
+
+.card-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.486);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+
+.card-item:hover .card-description {
+    height: 100%;
+}
+
+.link-card {
+    color: hsl(0, 0%, 0%);
+}
+
+.description {
+    font-size: 3em;
+    font-family: "Roboto Light";
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+    margin-top: 20px;
+}
+
+#iconos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#icono-title {
+    margin-block: 30px;
+    font-size: 1.2em;
+}
+
+.icono-container {
+    margin: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.icono-size {
+    filter: invert(100%);
+    width: 30px;
+    height: 30px;
+    margin-inline: 10px;
+}
+
+@media only screen and (max-width: 320px) {
+    #barra {
+        width: 600px;
+    }
+    .menu {
+        width: 600px;
+        margin-block: 20px;
+    }
+    #logo {
+        width: 600px;
+        font-size: 2em;
+        align-items: center;
+        margin-bottom: -60px;
+    }
+    .icono-size {
+        margin-right: 40px;
+    }
+    .item {
+        position: relative;
+        float: left;
+        margin: 0 20px 0px 20px;
+    }
+    #slider {
+        width: 600px;
+        overflow: hidden;
+    }
+    .slide img {
+        width: 600px;
+        object-fit: contain;
+    }
+    .navigation-manual {
+        position: absolute;
+        width: 600px;
+        display: flex;
+        margin-top: -50px;
+    }
+    h2 {
+        width: 400px;
+        font-size: 2em;
+        align-items: center;
+        margin-block: 40px;
+    }
+    #card-container {
+        width: 600px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 400px;
+        padding: 20px;
+        gap: 15px;
+    }
+    .card-item-3 {
+        grid-column: span 2;
+        height: 250px;
+        margin-top: 20px;
+    }
+    .card-description {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.486);
+        overflow: hidden;
+        width: 100%;
+        font-size: 10px;
+        height: 0;
+        transition: .5s ease;
+    }
+    footer {
+        width: 600px;
+    }
+}

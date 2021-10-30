@@ -1,0 +1,235 @@
+@font-face {
+    font-family: "Roboto Thin";
+    src: url(../css/Roboto/Roboto-Thin.ttf);
+}
+
+*{box-sizing: border-box;
+}
+
+body{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.icono-size{
+    filter: invert(100%);
+    width: 30px;
+    height: 30px;
+    margin-inline: 10px;
+}
+
+#barra{
+    width: 100%;
+    text-align: end;
+    background-color: black;
+}
+
+.sub-barra{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 80px;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-title{
+    font-family: "Roboto Thin";
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.sub-title a{
+    color: hsl(0, 0%, 0%);
+    padding: 5px;
+    position: relative;
+    display: block;
+    text-decoration: none;
+}
+
+.sub-title a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: hsl(0, 0%, 0%);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+  
+.sub-title a:hover::before {
+   transform: scaleX(0.5);
+}
+
+.sub-title a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: hsl(0, 0%, 0%);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s ease-in-out;
+}
+  
+.sub-title a:hover::after {
+   transform: scaleX(0.5);
+}
+
+.sub-menu{
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    background-color: hsla(0, 0%, 100%, 0.747);
+}
+
+.sub-menu ul{
+    list-style: none;
+    font-size: 1em;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+  
+.item{
+    position:relative;
+    float: left;
+    margin: 0 50px 0px 50px;
+}
+  
+.item a{
+    color: hsl(0, 0%, 0%);
+    padding: 12px;
+    display: block;
+    text-decoration: none;
+}
+  
+.item > a:before{
+    content: " ";
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color:hsl(0, 0%, 0%);
+    visibility: hidden;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: .25s linear;
+}
+  
+.item > a:hover:before,
+.item > a:focus:before{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.item .desplegable{
+    display: none;
+    position: absolute;
+    text-align: left;
+    padding: 0;
+}
+  
+.item:hover .desplegable{
+    display: block;
+    background-color: hsla(0, 0%, 100%, 0.747);
+}
+  
+.data-container{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 90%;
+    margin-top: 40px;
+    margin-inline: 40px;
+    gap: 30px;
+}
+
+#data-img{
+    height: 650px;
+    width: 530px;
+    object-fit: cover;
+    
+}
+
+.name-bag{
+    font-family: "Roboto Thin";
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 1.5em;
+    letter-spacing: 10px;
+    margin: 0%;
+}
+
+.data-description{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+p{
+    margin-top: 50px;
+    text-align: center;
+    line-height: 40px;
+}
+
+#color-option, #material-option, #size-option{
+    border: 2px;
+    background-color:  hsl(32, 85%, 82%);
+    height: 30px;
+    font-size: 1em;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+#color-option:hover{
+    background-color:  hsl(32, 95%, 76%);
+    cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    background-color: hsl(0, 0%, 0%);
+    color: hsl(0, 0%, 100%);
+    margin-top: 20px;
+}
+
+#iconos{
+   display:flex;
+   align-items: center;
+   justify-content: center;
+}
+
+#icono-title{
+  margin-block: 30px;
+  font-size: 1.2em;
+}
+  
+.icono-container{
+  margin: 30px;
+  display: flex;
+  align-items: center;
+}
+  
+.icono-size{
+  filter: invert(100%);
+  width: 30px;
+  height: 30px;
+  margin-inline: 10px;
+}

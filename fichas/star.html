@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./fichas.css">
+    <title>Vieques</title>
+</head>
+<body>
+    <div id="intro">
+        <div id="barra">
+            <img class="icono-size" src="../iconos/cart.svg" alt="">
+        </div>  
+        <div class="sub-barra">
+            <div class="sub-title">
+                <h3><a href="../index.html">KUPAL STORE</a></h3>
+            </div>
+            <div class="sub-menu">
+                <ul>
+                    <li class="item"><a href="../productos.html">Productos</a>
+                        <ul class="desplegable">
+                            <li><a href="../cuero.html">Cuero</a></li>
+                            <li><a href="#">Cruelty Free</a></li>
+                        </ul>
+                    </li>
+                    <li class="item"><a href="../mayorista.html">Mayoristas</a>
+                        <ul class="desplegable">
+                            <li><a href="#">Comercios</a></li>
+                            <li><a href="#">Regalos Empresariales</a></li>
+                        </ul>
+                    </li>
+                    <li class="item"><a href="../informacion.html">Información</a>
+                        <ul class="desplegable">
+                            <li><a href="#">Envíos</a></li>
+                            <li><a href="#">Cambios</a></li>
+                            <li><a href="#">Medio de Pago</a></li>
+                        </ul>
+                    </li>            
+                    <li class="item"><a href="../nosotros.html">Nosotros</a></li>
+                </ul>
+            </div>                
+        </div>
+    </div>
+    <div class="data-container">
+        <div class="data-bag">
+            <img id="data-img" src="../img/eco/mochila.jpeg" alt="cartera">
+            <div id="img-zoom"></div>
+        </div>
+        <div class="data-description">
+            <h3 class="name-bag">Mochila Star</h3>
+            <p>Cruelty Free<br>
+               Con cinta sublimada<br>
+               Apertura con cierre metálico YKK<br>
+               Interior forrado<br>
+               Bolsillo externo con cierre <br>
+               Un bolsillo interno porta celular <br>
+               Medidas: 22 alto x 18 ancho x 8 profundidad
+            </p>
+            <div id="select">
+                <label for="color">Colores:</label>
+                <select name="color" id="color-option">
+                    <option value="1">Negro</option>
+                    <option value="2">Plateado</option>
+                </select>
+            </div>
+        </div>
+
+        <script>
+            imageZoom("data-img", "img-zoom");
+        </script>
+    </div>
+</body>
+<footer>   
+    <div id="iconos">
+        <div id="icono-title">
+            <span>Seguinos en:</span> 
+        </div>
+        <div class="icono-container">
+            <a href="https://www.instagram.com/kupal.store/" target="_blank" rel="noopener noreferrer"><img class="icono-size" src="../iconos/instagram-brands.svg" alt=""></a>
+            <span class="link-media" >kupal.store</span>
+        </div>
+        <div class="icono-container">
+            <a href="https://www.facebook.com/razcarteras/" target="_blank" rel="noopener noreferrer"><img class="icono-size" src="../iconos/facebook-square-brands.svg" alt=""></a>
+            <span class="link-media" >carteras kupal</span>
+        </div>
+    </div>    
+</footer>
+</html>
