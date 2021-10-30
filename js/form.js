@@ -16,9 +16,6 @@ inputTel.addEventListener('change', (event) => {
     }
 })
 
-// formulario.addEventListener('submit', (e) => {
-//     e.preventDefault();
-// });
 
 var fields = {};
 document.addEventListener("DOMContentLoaded", function() {
@@ -44,10 +41,14 @@ function sendForm() {
 
     if (validForm) {
         // MENSAJE 
-        alert("TODO OK");
+        alert("Gracias por contactarse, le responderemos a la brevedad!");
+        fields.name.value = "";
+        fields.lastname.value = "";
+        fields.contact.value = "";
+        fields.comments.value = "";
     } else {
         // form invalido
-        alert("TODO MAL");
+        alert("Datos incompletos");
     }
 }
 
